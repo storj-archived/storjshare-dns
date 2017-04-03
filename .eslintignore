@@ -1,0 +1,6 @@
+static
+.nyc_output
+.github
+.git
+node_modules
+coverage

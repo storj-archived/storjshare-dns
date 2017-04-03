@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "test": "nyc --reporter=text --reporter=html tape test/*.js",
+    "posttest": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "3.19.0",
+    "eslint-config-airbnb-base": "11.1.2",
+    "eslint-plugin-import": "2.2.0",
+    "nyc": "^10.2.0",
+    "spdx": "^0.5.1",
+    "tape": "4.6.3"
+  }
+}
