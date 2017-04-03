@@ -3,15 +3,15 @@
 
 ![logo](./.github/logo.png)
 
-[![Build Status](https://travis-ci.org/retrohacker/node-template.png?branch=master)](https://travis-ci.org/retrohacker/node-template)
-![](https://img.shields.io/github/issues/retrohacker/node-template.svg)
-![](https://img.shields.io/npm/dm/node-template.svg)
-![](https://img.shields.io/npm/dt/node-template.svg)
-![](https://img.shields.io/npm/v/node-template.svg)
-![](https://img.shields.io/npm/l/node-template.svg)
-![](https://img.shields.io/twitter/url/https/github.com/retrohacker/node-template.svg?style=social)
+[![Build Status](https://travis-ci.org/retrohacker/notreallyapackage.png?branch=master)](https://travis-ci.org/retrohacker/notreallyapackage)
+![](https://img.shields.io/github/issues/retrohacker/notreallyapackage.svg)
+![](https://img.shields.io/npm/dm/notreallyapackage.svg)
+![](https://img.shields.io/npm/dt/notreallyapackage.svg)
+![](https://img.shields.io/npm/v/notreallyapackage.svg)
+![](https://img.shields.io/npm/l/notreallyapackage.svg)
+![](https://img.shields.io/twitter/url/https/github.com/retrohacker/notreallyapackage.svg?style=social)
 
-[![NPM](https://nodei.co/npm/node-template.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-template/)[![NPM](https://nodei.co/npm-dl/node-template.png?months=9&height=3)](https://nodei.co/npm/node-template/)
+[![NPM](https://nodei.co/npm/notreallyapackage.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/notreallyapackage/)[![NPM](https://nodei.co/npm-dl/notreallyapackage.png?months=9&height=3)](https://nodei.co/npm/notreallyapackage/)
 
 ### Usage
 
