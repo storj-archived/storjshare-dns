@@ -1,14 +1,42 @@
 {
+  "name": "storjshare-dns",
+  "description": "Manages storj.farm dns entries for the storj network",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
     "test": "nyc --reporter=text --reporter=html tape test/*.js",
     "posttest": "eslint ."
+  },
+  "dependencies": {
+    "bole": "^3.0.2",
+    "concurrent-request": "^1.0.2",
+    "gtoken": "^1.2.2",
+    "request": "^2.81.0"
   },
   "devDependencies": {
     "eslint": "3.19.0",
     "eslint-config-airbnb-base": "11.1.2",
     "eslint-plugin-import": "2.2.0",
     "nyc": "^10.2.0",
+    "proxyquire": "^1.7.11",
     "spdx": "^0.5.1",
     "tape": "4.6.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/storj/storjshare-dns.git"
+  },
+  "keywords": [
+    "storj",
+    "p2p",
+    "dns",
+    "ssl",
+    "https"
+  ],
+  "author": "William Blankenship <william.jblankenship@gmail.com>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/storj/storjshare-dns/issues"
+  },
+  "homepage": "https://github.com/storj/storjshare-dns#readme"
 }

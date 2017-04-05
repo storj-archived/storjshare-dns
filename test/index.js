@@ -1,3 +1,5 @@
+'use strict';
+
 const test = require('tape');
 const spdx = require('spdx');
 const pkg = require('../package.json');
@@ -14,7 +16,7 @@ test('license', (t) => {
   }
 
   // We don't use a clause, pick one or the other
-  const license = spdx(pkg.license).license;
+  const license = spdx.parse(pkg.license).license;
 
   // Either enforce freedom or fully commit to the public good
   t.ok(

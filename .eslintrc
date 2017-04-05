@@ -1,7 +1,13 @@
 {
+  "parserOptions": {
+    "sourceType": "script"
+  },
   "env": {
     "browser": true,
     "node": true
   },
-  "extends": "airbnb-base"
+  "extends": "airbnb-base",
+  "rules": {
+    no-restricted-properties: 0
+  }
 }
