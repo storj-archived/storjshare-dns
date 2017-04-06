@@ -1,32 +1,17 @@
-# Node.js Template
-### _Simple template for bootstrapping Node.js projects_
+# StorjShare DNS Service
+
+Manages the storj.farm TLD for farmers on the Storj network
 
 ![logo](./.github/logo.png)
 
-[![Build Status](https://travis-ci.org/retrohacker/notreallyapackage.png?branch=master)](https://travis-ci.org/retrohacker/notreallyapackage)
-![](https://img.shields.io/github/issues/retrohacker/notreallyapackage.svg)
-![](https://img.shields.io/npm/dm/notreallyapackage.svg)
-![](https://img.shields.io/npm/dt/notreallyapackage.svg)
-![](https://img.shields.io/npm/v/notreallyapackage.svg)
-![](https://img.shields.io/npm/l/notreallyapackage.svg)
-![](https://img.shields.io/twitter/url/https/github.com/retrohacker/notreallyapackage.svg?style=social)
+[![Build Status](https://travis-ci.org/retrohacker/storjshare-dns.png?branch=master)](https://travis-ci.org/retrohacker/storjshare-dns)
+![](https://img.shields.io/github/issues/retrohacker/storjshare-dns.svg)
+![](https://img.shields.io/npm/dm/storjshare-dns.svg)
+![](https://img.shields.io/npm/dt/storjshare-dns.svg)
+![](https://img.shields.io/npm/v/storjshare-dns.svg)
+![](https://img.shields.io/npm/l/storjshare-dns.svg)
+![](https://img.shields.io/twitter/url/https/github.com/retrohacker/storjshare-dns.svg?style=social)
 
-[![NPM](https://nodei.co/npm/notreallyapackage.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/notreallyapackage/)[![NPM](https://nodei.co/npm-dl/notreallyapackage.png?months=9&height=3)](https://nodei.co/npm/notreallyapackage/)
+[![NPM](https://nodei.co/npm/storjshare-dns.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/storjshare-dns/)[![NPM](https://nodei.co/npm-dl/storjshare-dns.png?months=9&height=3)](https://nodei.co/npm/storjshare-dns/)
 
-### Usage
-
-Fork, `npm install`, and start developing!
-
-> Note: You should open up [README.md](./README.md) and update the badges and description to reflect your project
-
-### Features
-
-* Default .travis.yml configured for both [LTS](https://github.com/nodejs/LTS) releases of Node.js
-* Checks for license
-  * [AGPL](https://choosealicense.com/licenses/agpl-3.0/) - Fully commit package to freedom
-  * [The Unlicense](https://choosealicense.com/licenses/unlicense/) - Fully commit package to public domain
-* Code coverage through [nyc](https://www.npmjs.com/package/nyc)
-* Extremely opinionated styleguide:
-  * Enforced through [eslint](http://eslint.org)
-  * Using [eslint-config-airbnb-base](http://www.npmjs.com/package/eslint-config-airbnb-base)
-* Ensures `npm init` was run
+# Coming Soon!
