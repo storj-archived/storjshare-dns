@@ -23,7 +23,7 @@ const config = {
 
 // Prevent config from loading
 test('stub config', (t) => {
-  const configPath = require.resolve('../lib/config');
+  const configPath = require.resolve('../../lib/config');
   require.cache[configPath] = {
     id: configPath,
     exports: config,
@@ -31,8 +31,8 @@ test('stub config', (t) => {
   t.end();
 });
 
-test('create 409', (t) => {
-  const zone = proxyquire('../lib/zone.js', {
+test('create: 409', (t) => {
+  const zone = proxyquire('../../lib/zone.js', {
     './request': (opts, cb) => cb(null, {}, { error: { code: 409 } }),
   });
 
@@ -43,8 +43,8 @@ test('create 409', (t) => {
   });
 });
 
-test('create error', (t) => {
-  const zone = proxyquire('../lib/zone.js', {
+test('create: error', (t) => {
+  const zone = proxyquire('../../lib/zone.js', {
     './request': (opts, cb) => cb([new Error('ENOTFOUND')]),
   });
 
@@ -55,8 +55,8 @@ test('create error', (t) => {
   });
 });
 
-test('create 500', (t) => {
-  const zone = proxyquire('../lib/zone.js', {
+test('create: 500', (t) => {
+  const zone = proxyquire('../../lib/zone.js', {
     './request': (opts, cb) =>
       cb(null, {}, {
         error: {
@@ -73,8 +73,8 @@ test('create 500', (t) => {
   });
 });
 
-test('check inputs', (t) => {
-  const zone = proxyquire('../lib/zone.js', {
+test('create: check inputs', (t) => {
+  const zone = proxyquire('../../lib/zone.js', {
     './request': (opts, cb) => cb(null, {}, {}),
   });
   zone.create('invalid opts', (e) => {
@@ -89,6 +89,46 @@ test('check inputs', (t) => {
   zone.create({ name: 'foo', uri: 'bar' }, (e) => {
     t.ok(e, 'should return error');
     t.end();
+  });
+});
+
+test('list: error', (t) => {
+  const zone = proxyquire('../../lib/zone.js', {
+    './request': (opts, cb) => cb([new Error('foobar')]),
+  });
+
+  zone.list({ uri: 'lol', name: 'foo', auth: 'bar' }, (e, records) => {
+    t.ok(e instanceof Array, 'should return error array');
+    t.ok(records == null, 'shouldnt return records');
+    t.end();
+  });
+});
+
+test('list: two pages', (t) => {
+  let invoked = false;
+  const zone = proxyquire('../../lib/zone.js', {
+    './request': (opts, cb) => {
+      const result = { changes: [] };
+      result.changes.push({ additions: ['foo'] });
+      if (!invoked) {
+        invoked = true;
+        result.nextPageToken = 'bar';
+      }
+      return cb(null, {}, result);
+    },
+  });
+
+  zone.list({ uri: 'lol', name: 'foo', auth: 'bar' }, (e, records) => {
+    t.error(e, 'succeeds');
+    t.ok(records instanceof Array, 'returned array of records');
+    if (!(records instanceof Array)) {
+      return t.end();
+    }
+    t.equal(records.length, 2, 'returned two records');
+    for (let i = 0; i < records.length; i += 1) {
+      t.equal(records[i], 'foo', 'all elements should be foo');
+    }
+    return t.end();
   });
 });
 

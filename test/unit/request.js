@@ -23,13 +23,13 @@ const config = {
 
 // Prevent config from loading
 test('stub config', (t) => {
-  const configPath = require.resolve('../lib/config');
+  const configPath = require.resolve('../../lib/config');
   require.cache[configPath] = {
     id: configPath,
     exports: config,
   };
   // eslint-disable-next-line global-require
-  request = require('../lib/request');
+  request = require('../../lib/request');
   t.end();
 });
 

@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --reporter=text --reporter=html tape test/*.js",
+    "start": "node index.js",
+    "test": "nyc --reporter=text --reporter=html tape test/unit/*.js",
+    "integration": "tape test/integration/*.js",
     "posttest": "eslint ."
   },
   "dependencies": {

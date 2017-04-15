@@ -2,7 +2,7 @@
 
 const test = require('tape');
 const spdx = require('spdx');
-const pkg = require('../package.json');
+const pkg = require('../../package.json');
 
 test('npm init', (t) => {
   t.ok(pkg.name, 'Run npm init');
