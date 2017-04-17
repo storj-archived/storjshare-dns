@@ -2,8 +2,6 @@
 
 Manages the storj.farm TLD for farmers on the Storj network
 
-![logo](./.github/logo.png)
-
 [![Build Status](https://travis-ci.org/storj/storjshare-dns.png?branch=master)](https://travis-ci.org/storj/storjshare-dns)
 ![](https://img.shields.io/github/issues/storj/storjshare-dns.svg)
 ![](https://img.shields.io/npm/dm/storjshare-dns.svg)

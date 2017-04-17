@@ -2,8 +2,6 @@
 Thank you for taking the time to open an issue.
 
 If you are wanting to report a problem, please follow this template.
-
-Feature requests are always welcome assuming you are willing to do the work of implementing the feature.
 -->
 
 ### Contents of `package.json`
